@@ -8,7 +8,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.qyang.donutpriorityqueue.dao.RankedDonutOrdersQueueDAOImpl;
+import com.qyang.donutpriorityqueue.dao.RankedDonutOrdersQueueDAO;
 import com.qyang.donutpriorityqueue.model.OrderItem;
 
 /**
@@ -19,7 +19,7 @@ import com.qyang.donutpriorityqueue.model.OrderItem;
 public class DonutPriorityQueueServiceImpl implements DonutPriorityQueueService {
 
 	@Autowired
-	RankedDonutOrdersQueueDAOImpl donutOrderRequestDAO;
+	RankedDonutOrdersQueueDAO donutOrderRequestDAO;
 
 	@Override
 	public Boolean addOrder(Long clientId, Integer quantity) {
